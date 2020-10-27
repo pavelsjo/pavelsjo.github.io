@@ -1,0 +1,75 @@
+html {
+    font-size: 10px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #336699;
+}
+
+body {
+    width: 800px;
+    margin: 0 auto;
+    padding: 0 20px 20px 20px;
+    background-color: #777777;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+a {
+    color:white;
+    text-decoration: none;
+}
+
+.bar-card {
+    margin: 0 auto;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #336699;
+}
+
+.img-card {
+    display: block;
+    width: 100%;
+}
+
+.header-card {
+    font-size: 30px;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.icon-bar-card {
+    width: 100%;
+    background-color: #555555;
+    overflow: auto;
+}
+
+.icon-bar-card a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar-card a:hover {
+    background-color: #336699;
+}
+
+.description-card {
+    font-size: 10px;
+    padding: 0;
+    margin: 10px;
+}
+
+.inlineTable {
+    display: inline-block;
+    transition: 0.3s;
+    border-radius: 5px;
+}

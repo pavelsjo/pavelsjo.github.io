@@ -1,0 +1,97 @@
+<body>
+    <div>        
+    <h1>Keep Last Date OAC Data Flow</h1>
+    <p>
+        In this example we need to remove duplicates by keeping only the most recent by place's row according to their date. <strong>example</strong>:
+    </p>
+    
+    <h2>Initial state</h2>
+    
+    <table class="inline-block">
+        <tr>
+            <th>ID</th>
+            <th>Place</th>
+            <th>Date</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>Temuco</td>
+            <td>10/10/2020/td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+    <table class="inline-block">
+        <tr>
+            <th>ID</th>
+            <th>Place</th>
+            <th>Date</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>0</td>
+            <td>Temuco</td>
+            <td>10/10/2020/td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+    </div>
+</body>
+
+
+<!-- 
+|1|Temuco|11/10/2020|2|
+|2|Temuco|12/10/2020|7|
+|3|Maldiva|09/10/2020|2|
+|4|Sucenaga|09/10/2020| 2|
+|5|Cairo|09/10/2020|26|
+|6|Maldiva|10/10/2020|6|
+
+<h2>Desired state</h2>
+
+|ID|Place|Date|Value|
+|--|--|--|--|
+|2|Temuco|12/10/2020|7|
+|4|Sucenaga|09/10/2020|12|
+|5|Cairo|09/10/2020|26|
+|6|Maldiva|10/10/2020|6|
+
+## Create a new data flow in OAC
+
+### 1. Load data frame with initial state
+
+![Initial State](./img/step-01.png)
+
+### 2. Search for max date by place
+
+> MAX(Date by Place)
+
+![Search for max date by place](./img/step-02.png)
+
+### 3. Create a Boolean to track last date
+
+> CASE WHEN Date = LastDate THEN 1 ELSE 0 END
+
+![Create a Boolean to track last date](./img/step-03.png)
+
+### 4. Apply Boolean filter
+
+![Apply Boolean filter](./img/step-04.png)
+
+### 5. Remove transition columns
+
+![Remove transition columns](./img/step-05.png)
+
+### 6. Save desired state
+
+![Save desired state](./img/step-06.png)
+
+## References
+
+- The Data Viz Underground - [Remove Duplicates in a Data Set](https://vizunderground.com/2020/08/07/remove-duplicates-in-a-data-set/) -->
