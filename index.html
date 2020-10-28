@@ -8,7 +8,32 @@
     <link href="styles/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <h1>Data Aplications Blog</h1>
+    <header>
+        <div id="data-science" class="tabcontent">
+            <h1>Data Science</h1>
+            <p>Extract insights from data.</p>
+          </div>
+          
+          <div id="machine-learning" class="tabcontent">
+            <h1>Machine Learning</h1>
+            <p>Automatize workflows with ML models.</p>
+          </div>
+          
+          <div id="data-apps" class="tabcontent">
+            <h1>Data Applications</h1>
+            <p>Use insights and ML models to build aplications.</p>
+          </div>
+          
+          <div id="tensor-flow" class="tabcontent">
+            <h1>TensorFlow js</h1>
+            <p>TensorFlow js is an end-to-end open-source platform for machine learning in web browser.</p>
+          </div>
+          
+          <button class="tablink" onclick="openCategory('data-science', this, '#336699')" id="defaultOpen">Data Science</button>
+          <button class="tablink" onclick="openCategory('machine-learning', this, '#FF6F00')">Machine Learning</button>
+          <button class="tablink" onclick="openCategory('data-apps', this, '#425066')">Data Apps</button>
+          <button class="tablink" onclick="openCategory('tensor-flow', this, 'black')">TensorFlow js</button> 
+    </header>
     <div class='resume-box'>
         <img src="blog/01-keep-last-date-oac-df/images/step-00.png" alt='bar post' class="img-resume-box">
         <div>
