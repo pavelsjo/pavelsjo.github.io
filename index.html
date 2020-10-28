@@ -8,20 +8,96 @@
     <link href="styles/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <h1>Data Aplications </h1>
-
-    <div class='bar-card'>
-        <img src="blog/01-keep-last-date-oac-df/images/step-01.png" alt='bar post' class="img-card">
+    <h1>Data Aplications</h1>
+    <div class='resume-box'>
+        <img src="blog/01-keep-last-date-oac-df/images/step-00.png" alt='bar post' class="img-resume-box">
         <div>
-            <h2 class="header-card"> <a href="">Keep last row </a></p></h2>
-            
-            <p class="description-card">This is my description</p>
+            <h2 class="header-resume-box"> <a href="blog/01-keep-last-date-oac-df.htm">Keep Last Date OAC Data Flow</a></p></h2>
+            <p class="description-resume-box">Kown how to deal with duplicate data keeping only <strong>last row by date</strong>.</p>
         </div>
-        <div class='icon-bar-card'>
+        <div class='icon-resume-box'>
             <a href="#"><i class="fas fa-file-csv"></i></i></a> 
             <a href="#"><i class="fas fa-file-csv"></i></i></a>
             <a href="#"><i class="fas fa-chart-bar"></i></a> 
         </div>
     </div>
+    <div class="detail-box">
+        <div class="row">
+            <div class="column" style="background-color:#aaa;">
+                <h2>Initial State</h2>
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Place</th>
+                        <th>Date</th>
+                        <th>Value</th>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>Temuco</td>
+                        <td>11/10/2020</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Temuco</td>
+                        <td>12/10/2020</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>Maldiva</td>
+                        <td>09/10/2020</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Sucenaga</td>
+                        <td>09/10/2020</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Cairo</td>
+                        <td>10/09/2020</td>
+                        <td>26</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Maldiva</td>
+                        <td>10/10/2020</td>
+                        <td>6</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="column" style="background-color:#bbb;">
+                <h2>Desired State</h2>
+                <p>
+                    |ID|Place|Date|Value|
+                    |--|--|--|--|
+                    |2|Temuco|12/10/2020|7|
+                    |4|Sucenaga|09/10/2020|12|
+                    |5|Cairo|09/10/2020|26|
+                    |6|Maldiva|10/10/2020|6|
+                </p>
+            </div>
+        </div>
+       <h3>Create a new data flow in OAC</h3>
+       <h4>1. Load data frame with initial state</h4>
+       <img src="blog/01-keep-last-date-oac-df/images/step-01.png">
+       <h4>2. Search for max date by place</h4>
+       <p>MAX(Date by Place)</p>
+       <img src="blog/01-keep-last-date-oac-df/images/step-02.png">
+       <h4>3. Create a Boolean to track last date</h4>  
+       <p>CASE WHEN Date = LastDate THEN 1 ELSE 0 END</p>
+       <img src="blog/01-keep-last-date-oac-df/images/step-03.png">
+       <h4>4. Apply Boolean filter</h4>
+       <img src="blog/01-keep-last-date-oac-df/images/step-04.png">
+       <h4>5. Remove transition columns</h4>
+       <img src="blog/01-keep-last-date-oac-df/images/step-05.png">
+       <h4>6. Save desired state</h4>
+       <img src="blog/01-keep-last-date-oac-df/images/step-06.png">
+</div>
+<script src="scripts/main.js"></script>
 </body>
 </html>
