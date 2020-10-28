@@ -71,7 +71,33 @@ a {
 .row {
     display: flex;
 }
+
+.row table, th, td {
+    border: 1px solid black;
+}
   
 .column {
+    font-size: 20px;
+    color: black;
+    text-align: center;
     flex: 50%;
+    padding: 10px 0;
+    padding: 0 40px 40px 20px;
+}
+
+.column th {
+    color: black;
+}
+
+.detail-box img {
+    display: block;
+    width: 100%;
+}
+
+.detail-box h4 {
+    font-size: 40px;
+}
+
+.detail-box p {
+    font-size: 20px;
 }
